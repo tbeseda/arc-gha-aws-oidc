@@ -9,12 +9,6 @@ jobs:
       id-token: write
       contents: read
     steps:
-      - name: Configure AWS credentials
-        uses: aws-actions/configure-aws-credentials@v1
-        with:
-          role-to-assume: arn:aws:iam::180240211041:role/github
-          aws-region: us-west-2
-
       - name: Checkout
         uses: actions/checkout@v3
 
@@ -35,6 +29,12 @@ jobs:
           VER=`node --version`; echo "Node ver:   $VER"
           VER=`npm --version`; echo "npm ver:    $VER"
           arc version
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          role-to-assume: arn:aws:iam::180240211041:role/github
+          aws-region: us-west-2
 
       - name: AWS get-caller-identity
         run: aws sts get-caller-identity

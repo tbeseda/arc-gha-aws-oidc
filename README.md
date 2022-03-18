@@ -1,3 +1,8 @@
+**Deploy an [Architect](https://arc.codes) project from GitHub Actions with keys gathered from a specific AWS IAM Role federated by an IAM OIDCProvider.**
+
+CloudFormation to creat the GitHub OIDCProvider and an IAM Role:
+
+```yml
 Parameters:
   FullRepoName:
     Type: String
@@ -29,3 +34,12 @@ Resources:
 Outputs:
   Role:
     Value: !GetAtt Role.Arn
+
+```
+
+See [`.github/workflows/deploy.yml`](./.github/workflows/deploy.yml) for usage.
+
+Resources
+
+* [aws-actions/configure-aws-credentials](https://github.com/aws-actions/configure-aws-credentials)
+* Addresses ['remix-run/grunge-stack#20'](https://github.com/remix-run/grunge-stack/issues/20)

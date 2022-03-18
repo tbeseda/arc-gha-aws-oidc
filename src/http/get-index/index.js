@@ -22,11 +22,8 @@ async function handler (req) {
           Hello from an Architect Node.js function!
         </h1>
         <p class="margin-bottom-8">
-          Get started by editing this file at:
+          Deployed automatically <a href="https://github.com/tbeseda/arc-gha-aws-oidc/actions">from GitHub Actions</a> 💪
         </p>
-        <code>
-          src/http/get-index/index.js
-        </code>
       </div>
       <div>
         <p class="margin-bottom-8">
