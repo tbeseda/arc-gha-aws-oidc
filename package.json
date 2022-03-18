@@ -8,5 +8,9 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@architect/architect": "^10.1.0",
+    "@architect/functions": "^5.0.4"
+  }
 }
