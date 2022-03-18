@@ -13,7 +13,7 @@ jobs:
 
       # - name: Configure AWS
       #   run: |
-      #     export AWS_ROLE_ARN=arn:aws:iam::180240211041:role/ExampleGithubRole
+      #     export AWS_ROLE_ARN=arn:aws:iam::180240211041:role/github
       #     export AWS_WEB_IDENTITY_TOKEN_FILE=/tmp/awscreds
       #     export AWS_DEFAULT_REGION=us-east-1
 
@@ -26,7 +26,7 @@ jobs:
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
-          role-to-assume: arn:aws:iam::180240211041:role/ExampleGithubRole
+          role-to-assume: arn:aws:iam::180240211041:role/github
           aws-region: us-east-1
 
       - run: aws sts get-caller-identity # just an example.
