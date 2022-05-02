@@ -2,15 +2,10 @@
   "name": "arc-gha-aws-oidc",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@architect/architect": "^10.1.0",
-    "@architect/functions": "^5.0.4"
+    "@architect/architect": "^10.3.2"
   }
 }

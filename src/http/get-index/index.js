@@ -1,8 +1,11 @@
-const arc = require('@architect/functions');
-
-async function handler (req) {
+exports.handler = async function http () {
   return {
-    html: `
+    statusCode: 200,
+    headers: {
+      'cache-control': 'no-cache, no-store, must-revalidate, max-age=0, s-maxage=0',
+      'content-type': 'text/html; charset=utf8'
+    },
+    body: `
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,5 +43,3 @@ async function handler (req) {
 `
   }
 }
-
-module.exports.handler = arc.http.async(handler);
